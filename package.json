@@ -14,17 +14,17 @@
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
-    "@types/node": "latest",
-    "@typescript-eslint/eslint-plugin": "latest",
-    "@typescript-eslint/parser": "latest",
+    "@types/node": "^24.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.49.0",
+    "@typescript-eslint/parser": "^8.49.0",
     "bun-types": "latest",
-    "eslint": "latest",
+    "eslint": "^9.39.1",
     "eslint-config-prettier": "latest",
-    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-prettier": "^5.5.4",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "prettier": "latest",
-    "typescript": "latest"
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [

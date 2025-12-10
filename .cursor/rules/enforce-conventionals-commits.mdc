@@ -1,0 +1,26 @@
+---
+alwaysApply: true
+# ==========================================
+# RULE: Enforce English + Conventional Commits
+# ==========================================
+# Cursor must follow these rules at all times:
+rules:
+  - id: enforce_conventional_commits
+    pattern: "commit"
+    behavior:
+      preferred_language: "en"
+      description: >
+        When generating commit messages, always use Conventional Commits format.
+        Never write comments or explanations. Only output the commit message itself.
+        The format must be:
+        <type>(<scope>): <short, imperative description>
+        Allowed types: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert.
+        Keep all descriptions short, direct, and in English.
+        Do not include line breaks unless needed for BREAKING CHANGE.
+        Do not include comments or additional text around the commit.
+        Commit examples:
+        feat(api): add monthly transfer endpoint
+        fix(server): handle null request body
+        chore(config): update lint settings
+
+---
