@@ -1,15 +1,39 @@
 {
-  "name": "server",
+  "name": "monthly-transfer-server",
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "prepare": "husky",
+    "lint": "bunx eslint .",
+    "format": "bunx prettier --write ."
   },
   "dependencies": {
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "bun-types": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "latest",
+    "typescript": "latest"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "bunx eslint --fix",
+      "bunx prettier --write"
+    ],
+    "*.{json,md}": [
+      "bunx prettier --write"
+    ]
   },
   "module": "src/index.js"
 }
