@@ -9,6 +9,8 @@
     "format": "bunx prettier --write ."
   },
   "dependencies": {
+    "drizzle-orm": "^0.45.0",
+    "drizzle-typebox": "^0.3.3",
     "elysia": "latest"
   },
   "devDependencies": {
